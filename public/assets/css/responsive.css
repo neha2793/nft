@@ -1,0 +1,222 @@
+@media all and (min-width: 320px) and (max-width: 991px) {
+button.navbar-toggler {
+    padding: 0px !important;
+    position: relative;
+    box-shadow: none !important;
+    outline: none !important;
+}
+button.navbar-toggler span.navbar-toggler-icon {
+    background: none !important;
+    position: relative;
+    border-top: 2px solid #87ef43;
+    height: 22px !important;
+}
+button.navbar-toggler span.navbar-toggler-icon::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background: #87ef43;
+}
+button.navbar-toggler span.navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 8px;
+    width: 100%;
+    height: 2px;
+    background: #87ef43;
+}
+.header-sec nav.navbar li.nav-item a.nav-link {
+    font-size: 16px;
+    padding: 3px 2px;
+    line-height: 26px;
+    margin-top: 8px;
+}
+.dropdown-d {
+    margin-left: 2px;
+}
+}
+
+
+
+/*320-991*/
+
+@media all and (min-width: 320px) and (max-width: 767px) {
+.mainbanner-left h2 {
+    font-size: 40px;
+    margin: 0px 0px 50px 0px;
+}
+.mainbanner-left p {
+    font-size: 17px;
+    margin: 0px 0px 30px 0px;
+}
+.btn-sec .b-btn {
+    margin-right: 10px;
+}
+.btn.btn-info {
+    font-size: 16px;
+    line-height: 27px;
+    padding: 9px 22px;
+}
+.mainbanner-left {
+    margin-bottom: 30px;
+}
+.mainbanner {
+    min-height: 430px;
+    padding: 50px 0px 70px;
+}
+.myfvt {
+    width: 100%;
+    padding: 0px 15px;
+    margin-bottom: 30px;
+}
+.row.myfvtrow {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.nftbox-img img.img-fluid {
+    width: 100%;
+}
+.collection_item:nth-child(2), .collection_item:nth-child(4) {
+    width: 100%;
+}
+.collection_item {
+    width: 100%;
+}
+.collection_row2 .collection_item {
+    width: 100%;
+}
+.collection_row2 .collection_item:nth-child(2), .collection_row2 .collection_item:nth-child(4) {
+    width: 100%;
+}
+.top-sellerbox {
+    margin-bottom: 15px;
+}
+.footer-nav ul.social-link li a .fa {
+    font-size: 21px;
+    height: 46px;
+    width: 46px;
+}
+.footer-sec {
+    padding: 50px 0px 0px;
+}
+.copyright-sec {
+    padding: 15px 0 15px;
+    margin-top: 50px;
+    text-align: center;
+}
+.copyright-sec p {
+    font-size: 14px;
+}
+.copyright-sec ul {
+    text-align: center;
+}
+.copyright-sec ul li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.copyright-sec ul li a {
+    font-size: 14px;
+}
+.innerbg h3 {
+    font-size: 30px;
+}
+.loginform {
+    padding: 40px 15px;
+}
+.googlebtn a {
+    font-size: 15px;
+}
+.login-page-design .form-group.signuplink p {
+    font-size: 14px;
+}
+.signuplink a {
+    font-size: 14px;
+}
+.login-page-design h4 {
+    font-size: 26px;
+    margin: 0px 0px 20px 0px;
+}
+}
+/*320-767*/
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    
+}
+/*768-991*/ 
+
+@media all and (min-width: 992px) and (max-width: 1024px) {
+    
+}
+/*992-1024*/ 
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+.footer-nav ul.social-link li a {
+    margin: 0px 7px 7px 0px;
+}
+.top-sellerbox h3 {
+    font-size: 16px;
+}
+.collection_item_in {
+    padding: 10px;
+}
+.collection-desc h5 {
+    font-size: 11px;
+    padding: 6px 15px;
+}
+.collection-desc h3 {
+    font-size: 20px;
+}
+.collection-desc {
+    padding: 0px 10px;
+}
+.myfvt {
+    width: 33.33%;
+    margin-bottom: 30px;
+}
+.mainbanner {
+    min-height: 430px;
+    padding: 130px 0px 150px;
+}
+.mainbanner-left h2 {
+    font-size: 30px;
+    margin: 0px 0px 50px 0px;
+}
+.mainbanner-left p {
+    font-size: 17px;
+    margin: 0px 0px 30px 0px;
+}
+.btn-sec .b-btn {
+    margin-right: 10px;
+}
+.btn.btn-info {
+    font-size: 17px;
+    line-height: 27px;
+    padding: 9px 27px;
+}
+}
+/*768-1024*/ 
+
+
+@media all and (min-width: 1025px) and (max-width: 1199px) {
+.footer-nav ul.social-link li a {
+    margin: 0px 7px 7px 0px;
+}    
+}
+/*1025-1199*/ 
+
+
+@media all and (min-width: 1200px) and (max-width: 1280px) {
+    
+}
+/*1200-1280*/ 
+
+
+    
+    
+
+
+

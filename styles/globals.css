@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+button.right-align {
+    background-color: #7c66a98c;
+    border: 2px solid #48292938;
+    width: 270px;
+    height: 40px;
+    text-align: center;
+    line-height: 2;
+    text-decoration: none;
+    margin-top: -48px;
+    color: #000000f2;
+    margin-left: 690px;
+}
+
+
+
+.nftbox {
+    margin-bottom: 20px;
+}
+

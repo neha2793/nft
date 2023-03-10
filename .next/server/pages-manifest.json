@@ -1,0 +1,10 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/my-nft": "pages/my-nft.js",
+  "/shipping-container-video": "pages/shipping-container-video.js",
+  "/shipping-container": "pages/shipping-container.js",
+  "/slime-seat-management": "pages/slime-seat-management.js",
+  "/create-nft": "pages/create-nft.js"
+}
