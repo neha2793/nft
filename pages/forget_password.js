@@ -6,15 +6,15 @@ import toast from "../components/Toast";
 import Mainheader from './components/layout/mainheader';
 import Mainfooter from './components/layout/mainfooter';
 
-export default function forget_password() {
+export default function ForgetPassword() {
   
-  const [formInput, updateFormInput] = useState({  email: '' })
+  const [formInput, setUpdateFormInput] = useState({  Email: '' })
   const notify = React.useCallback((type, message) => {
     toast({ type, message });
   }, []);
 
-  async function submit (){
-    if(formInput.email){
+  async function Submit (){
+    if(formInput.Email){
       document.getElementById("submit_btn").disabled = true;
         axios.post(process.env.NEXT_PUBLIC_BASE_URL+'/api/forget-password', formInput,{
             headers: {
@@ -22,8 +22,8 @@ export default function forget_password() {
             },
         }).then((response)  => {
             notify("success", 'Reset password email has been sent!')
-            updateFormInput({
-                email: ''
+            setUpdateFormInput({
+              Email: ''
             })
             document.getElementById('email').value = '';
             document.getElementById("submit_btn").disabled = false;
@@ -68,10 +68,10 @@ export default function forget_password() {
       <div className="loginform">
       <form>
         <div className="form-group">
-          <input type="email" className="form-control" onChange={e => updateFormInput({ ...formInput, email: e.target.value })} placeholder="Email Address" id="email"/>
+          <input type="email" className="form-control" onChange={e => setUpdateFormInput({ ...formInput, Email: e.target.value })} placeholder="Email Address" id="email"/>
         </div>
         <div className="form-group loginbtn">
-        <input type="button" id="submit_btn" onClick={submit} className="btn btn-info" value="submit"/>
+        <input type="button" id="submit_btn" onClick={Submit} className="btn btn-info" value="submit"/>
         </div>
       </form>
       </div>

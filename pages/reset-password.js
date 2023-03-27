@@ -7,7 +7,7 @@ import Mainheader from './components/layout/mainheader';
 import Mainfooter from './components/layout/mainfooter';
 import { useRouter } from 'next/router'
 
-export default function forget_password() {
+export default function ResetPassword() {
     const router = useRouter()
     const [formInput, updateFormInput] = useState({  password: '', confirm_password: '', email: '' })
 

@@ -1,10 +1,7 @@
 /* pages/create-nft.js */
 import * as React from "react";
-import { ethers } from 'ethers'
 import axios from 'axios'
 import { useRouter } from 'next/router'
-import Web3Modal from 'web3modal'
-import Link from 'next/link'
 import toast from "../components/Toast";
 import { useEffect, useState } from 'react'
 import Mainheader from './components/layout/mainheader';
@@ -94,6 +91,7 @@ export default function Myprofile() {
   }
 
   async function submitButton(){
+    console.log(inputField.facebook_link)
     const user = JSON.parse(localStorage.getItem('user'));
     delete user.user.profile_image
     
@@ -108,9 +106,9 @@ export default function Myprofile() {
     fd.append('country', inputField.country)
     fd.append('pincode', inputField.pincode)
     fd.append('address', inputField.address)
-    fd.append('facebook_link', inputField.facebook_link)
-    fd.append('twitter_link', inputField.twitter_link)
-    fd.append('youtube_link', inputField.youtube_link)
+    fd.append('facebook_link', Boolean(inputField.facebook_link) ? inputField.facebook_link : '')
+    fd.append('twitter_link', Boolean(inputField.twitter_link )? inputField.twitter_link : '')
+    fd.append('youtube_link', Boolean(inputField.youtube_link) ? inputField.youtube_link : '')
     fd.append('phone_number', Boolean(inputField.phone_number) ?inputField.phone_number : '' )
     fd.append('profile_image', profile_image)  
     axios({

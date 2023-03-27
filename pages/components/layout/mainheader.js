@@ -1,10 +1,7 @@
 import React from 'react';
 import Link from 'next/link'
-import logo from "../../../public/assets/images/logo.png";
-import one from "../../../public/assets/images/1.jpg";
-import { useRouter } from 'next/router'
-import { Redirect } from "react-router-dom";
-import axios, { Axios } from 'axios';
+import { Navigate } from "react-router-dom";
+
 
 
 class Mainheader extends React.Component {
@@ -79,7 +76,7 @@ class Mainheader extends React.Component {
 
   render() {
     if (this.state.redirect) {
-      return <Redirect to={this.state.redirect} />
+      return <Navigate to={this.state.redirect} />
     }
     return (
       <>

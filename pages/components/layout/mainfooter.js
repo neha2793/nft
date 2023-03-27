@@ -1,7 +1,4 @@
 import React from 'react';
-import logo from "../../assetss/images/logo.png"
-import violet from "../../assetss/images/violet-ball.png"
-import orange from "../../assetss/images/orange-ball.png"
 import Link from 'next/link'
 class Mainfooter extends React.Component {
   constructor(props) {
@@ -69,11 +66,11 @@ class Mainfooter extends React.Component {
               SC Video
             </a>
           </li> 
-          {/* <li style={{ display: this.state.user ? "block" : "none" }}>
+          <li style={{ display: this.state.user ? "block" : "none" }}>
             <Link href="/transaction-history" >
               <a>Transaction History</a>
             </Link>
-          </li> */}
+          </li>
 
         </ul>
       </div>

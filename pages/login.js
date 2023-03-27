@@ -3,13 +3,12 @@ import * as React from "react";
 import { useEffect, useState } from 'react'
 import axios from "axios";
 import toast from "../components/Toast";
-import {Routes, Route, useNavigate} from 'react-router-dom';
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Mainheader from './components/layout/mainheader';
 import Mainfooter from './components/layout/mainfooter';
 
-export default function login() {
+export default function Login() {
   const [inputField , setInputField] = useState({
     email: '',
     password:'',

@@ -15,6 +15,8 @@ import Mainfooter from './components/layout/mainfooter';
 
 
 export default function CreateItem() {
+  
+
   const [fileUrl, setFileUrl] = useState(null)
   const [processing, setProcessing] = useState(null)
   const [uploading, setUploading] = useState(null)
@@ -238,6 +240,8 @@ export default function CreateItem() {
       notify("error", 'Please fill all mandatory fields!')
     }
   }
+
+  
 
   return (
     <div>

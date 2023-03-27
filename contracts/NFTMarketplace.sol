@@ -53,7 +53,7 @@ contract NFTMarketplace is ERC721URIStorage {
       _tokenIds.increment();
       uint256 newTokenId = _tokenIds.current();
 
-      _mint(msg.sender, newTokenId);
+      _safeMint(msg.sender, newTokenId);
       _setTokenURI(newTokenId, tokenURI);
       createMarketItem(newTokenId, price);
       return newTokenId;
@@ -71,7 +71,7 @@ contract NFTMarketplace is ERC721URIStorage {
         payable(msg.sender),
         payable(address(this)),
         price,
-        false
+        true
       );
 
       _transfer(msg.sender, address(this), tokenId);
@@ -80,7 +80,7 @@ contract NFTMarketplace is ERC721URIStorage {
         msg.sender,
         address(this),
         price,
-        false
+        true
       );
     }
 

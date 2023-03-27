@@ -265,12 +265,18 @@ export default function SlimeSeatManagement() {
             try {
               transaction = await contract.createToken(url, price, { value: listingPrice })
               await transaction.wait()
+
             } catch (error) {
+              if(error.code == '-32603'){
+                notify('error','Insufficient funds for gas * price + value!')
+                setProcessing(null);
+              }
               if(error.code == 'ACTION_REJECTED'){
-                notify('error','Transaction rejected!') 
+                notify('error','Transaction rejected!')
                 setProcessing(null);
               }
             }
+           
           
             if(transaction){
               const data = await contract.fetchItemsListed()
@@ -973,8 +979,8 @@ export default function SlimeSeatManagement() {
                                   flag ? Boolean(image_priview1) ?
 
                                   <><div className="remove1 get_image_id" data-image={data? data.TBL_Slimeseat_Images[0]?data.TBL_Slimeseat_Images[0].id:'':''} id={0} onClick={removeImage} >X</div><img id="profilepreview1" className="profile_images_preview"  src={image_priview1}  /> </> : 
-                                  <img id="profilepreview1" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/'+Image_path :  'assets/images/no-image.png'}  /> : 
-                                  <img id="profilepreview1" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/'+Image_path :  'assets/images/no-image.png'}  /> 
+                                  <img id="profilepreview1" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/public/'+Image_path :  'assets/images/no-image.png'}  /> : 
+                                  <img id="profilepreview1" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/public/'+Image_path :  'assets/images/no-image.png'}  /> 
                                 } 
                             </figure>
                         </div>
@@ -984,8 +990,8 @@ export default function SlimeSeatManagement() {
                                   flag ? Boolean(image_priview2) ?
 
                                   <><div className="remove2 get_image_id" data-image={data? data.TBL_Slimeseat_Images[1]?data.TBL_Slimeseat_Images[1].id:'' :''} id={1} onClick={removeImage} >X</div><img id="profilepreview2" className="profile_images_preview" src={image_priview2}  /> </> : 
-                                  <img id="profilepreview2" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/'+Image_path :  'assets/images/no-image.png'}  /> : 
-                                  <img id="profilepreview2" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/'+Image_path :  'assets/images/no-image.png'}  /> 
+                                  <img id="profilepreview2" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/public/'+Image_path :  'assets/images/no-image.png'}  /> : 
+                                  <img id="profilepreview2" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/public/'+Image_path :  'assets/images/no-image.png'}  /> 
                                 } 
                             </figure>
                         </div>
@@ -995,8 +1001,8 @@ export default function SlimeSeatManagement() {
                                   flag ? Boolean(image_priview3) ?
 
                                   <><div className="remove3 get_image_id" data-image={ data? data.TBL_Slimeseat_Images[2]?data.TBL_Slimeseat_Images[2].id:'':''} id={2} onClick={removeImage} >X</div><img id="profilepreview3" className="profile_images_preview" src={image_priview3}  /> </> : 
-                                  <img id="profilepreview3" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/'+Image_path :  'assets/images/no-image.png'}  /> : 
-                                  <img id="profilepreview3" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/'+Image_path :  'assets/images/no-image.png'}  /> 
+                                  <img id="profilepreview3" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/public/'+Image_path :  'assets/images/no-image.png'}  /> : 
+                                  <img id="profilepreview3" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/public/'+Image_path :  'assets/images/no-image.png'}  /> 
                                 }
                             </figure>
                         </div>
@@ -1006,8 +1012,8 @@ export default function SlimeSeatManagement() {
                                   flag ? Boolean(image_priview4) ?
 
                                   <><div className="remove4 get_image_id" data-image={data? data.TBL_Slimeseat_Images[3]?data.TBL_Slimeseat_Images[3].id:'':''} id={3} onClick={removeImage} >X</div><img id="profilepreview4" className="profile_images_preview" src={image_priview4}  /> </> : 
-                                  <img id="profilepreview4" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/'+Image_path :  'assets/images/no-image.png'}  /> : 
-                                  <img id="profilepreview4" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/'+Image_path :  'assets/images/no-image.png'}  /> 
+                                  <img id="profilepreview4" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/public/'+Image_path :  'assets/images/no-image.png'}  /> : 
+                                  <img id="profilepreview4" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/public/'+Image_path :  'assets/images/no-image.png'}  /> 
                                 } 
                             </figure>
                         </div>
@@ -1017,8 +1023,8 @@ export default function SlimeSeatManagement() {
                                   flag ? Boolean(image_priview5) ?
 
                                   <><div className="remove5 get_image_id" data-image={data?data.TBL_Slimeseat_Images[4]?data.TBL_Slimeseat_Images[4].id:'':''}  id={4} onClick={removeImage} >X</div><img id="profilepreview5" className="profile_images_preview" src={image_priview5}  /> </> : 
-                                  <img id="profilepreview5" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/'+Image_path :  'assets/images/no-image.png'}  /> : 
-                                  <img id="profilepreview5" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/'+Image_path :  'assets/images/no-image.png'}  /> 
+                                  <img id="profilepreview5" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/public/'+Image_path :  'assets/images/no-image.png'}  /> : 
+                                  <img id="profilepreview5" className="profile_images_preview"  src={  Image_path > 0 ? base_url+'/public/'+Image_path :  'assets/images/no-image.png'}  /> 
                                 } 
                             </figure>
                         </div>

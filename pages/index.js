@@ -7,7 +7,6 @@ import Web3Modal from 'web3modal'
 import Link from 'next/link'
 import toast from "../components/Toast";
 import Mainheader from './components/layout/mainheader';
-import { getParsedEthersError } from "@enzoferey/ethers-error-parser";
 
 import {
   marketplaceAddress
@@ -222,52 +221,31 @@ export default function Home() {
           })
 
          
-          // let transaction = new FormData();
-          // transaction.append('billing_email',  user.email)
-          // transaction.append('billing_name', user.name)
-          // transaction.append('billing_lastname', user.lastname)
-          // transaction.append('billing_address', user.address)
-          // transaction.append('billing_city', user.city)
-          // transaction.append('billing_state', user.state)
-          // transaction.append('billing_pincode', user.pincode)
-
-          // transaction.append('Shipping_FirstName', user.name)
-          // transaction.append('Shipping_lastName', user.lastname)
-          // transaction.append('Shipping_address1', user.address)
-          // transaction.append('Shipping_address2', user.address)
-          // transaction.append('Shipping_city', user.city)
-          // transaction.append('Shipping_state', user.state)
-          // transaction.append('Shipping_Zipcode', user.pincode)
-
-
-          // transaction.append('item_price', nft.price)
-          // transaction.append('item_quantity', 1)
-          // transaction.append('item_product_id', product_id)
-          // transaction.append('item_Transaction_Token', 'ABC-124_Q')
-
-          // axios({
-          //   method: 'post',
-          //   url: process.env.NEXT_PUBLIC_BASE_URL+'/api/order-nft',
-          //   data: transaction,
-          //   headers: {
-          //     'Content-Type': 'multipart/form-data',
-          //     'Authorization': 'Bearer '+user.access_token
-          //   },
-          // }).then((response)  => {
-          //   console.log(response)
-          // }).catch(function (error) {
-          //   // handle error
-          //   console.log(error)
-          //   if(error.response.status == 400){
-          //     notify("error", error.response.data.error)
-          //   }else if(error.response.status == 401){
-          //     localStorage.removeItem("user")
-          //     router.push('/login')
-          //   }else{
-          //     notify("error", 'Something went wrong please try again!')
-          //   }  
-          // })
-      
+          let transaction_detail = new FormData();
+          transaction_detail.append('product_id', nft.id)
+          transaction_detail.append('Transaction_Token', 'ABC001567IUOP')
+          transaction_detail.append('Price', nft.price)
+          transaction_detail.append('Quantity', 1)
+  
+          axios.post(process.env.NEXT_PUBLIC_BASE_URL+'/api/order-nft', transaction_detail,{
+            headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer '+user.access_token
+            },
+          }).then((response)  => {
+            const data = response.data;
+          }).catch(function (error) {
+            // handle error
+            if(error.response.status == 400){
+              notify("error", error.response.data.error)
+            }else if(error.response.status == 401) {
+              localStorage.removeItem("user")
+              router.push('/login')
+            }else{
+              notify("error", 'Something went wrong please try again!')
+            } 
+          })
+          
           loadNFTs()
         }
       }
@@ -370,7 +348,7 @@ export default function Home() {
           <div className="row">
             <div className="col-md-6">
               <div className="mainbanner-left">
-                <h2>Mint, <span>Buy</span>, and <span>Sell</span> Your NFT's<div className="divider"></div></h2>
+                <h2>Mint, <span>Buy</span>, and <span>Sell</span> Your NFT&apos;s<div className="divider"></div></h2>
                 <p>2kPAID is the biggest Blockchain based NFT marketplace</p>
                 <div className="btn-sec">
                   {/* <a href="" className="btn btn-info b-btn">Create NFT</a> */}

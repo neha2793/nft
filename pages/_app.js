@@ -1,11 +1,7 @@
 /* pages/_app.js */
 import * as ReactAll from "react";
 import React, { useEffect, useState } from "react";
-import { ethers } from "ethers";
 import '../styles/globals.css'
-import queryString from 'query-string';
-// import Link from 'next/link'
-// import { Button, Card } from "react-bootstrap";
 import './assetss/css/bootstrap.min.css';
 import './assetss/css/style.css';
 import './assetss/css/responsive.css';
@@ -49,9 +45,11 @@ function MyApp({ Component, pageProps }) {
       <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"> </script>
       <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
 
-      <script src="assets/js/jquery.min.js"></script>
+      <script src="./assets/js/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="./assets/js/bootstrap.min.js"></script>
+      <script src='https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js'></script>
+      <script src='https://npmcdn.com/moralis/dist/moralis.js'></script>
 
     </div>
   )

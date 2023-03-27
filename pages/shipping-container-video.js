@@ -94,10 +94,10 @@ export default function SCVideo() {
       formatter: (cell, row) => row.type == 'Video' ?  <>
                               <div className="video_button">
                                 <i className="fa fa-play-circle" aria-hidden="true"></i>
-                                <input type="button" onClick={popUpClick}  value="" className="fa fa-play-circle"  name={base_url+'/'+ row.video} /> 
+                                <input type="button" onClick={popUpClick}  value="" className="fa fa-play-circle"  name={base_url+'/public/'+ row.video} /> 
                                 <div>
                                   <video width="320" height="240">
-                                    <source src={row.video ? process.env.NEXT_PUBLIC_BASE_URL+'/'+ row.video :''} type="video/mp4" />
+                                    <source src={row.video ? process.env.NEXT_PUBLIC_BASE_URL+'/public/'+ row.video :''} type="video/mp4" />
                                     Your browser does not support the video tag.
                                   </video>
                                 </div>

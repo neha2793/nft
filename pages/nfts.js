@@ -5,7 +5,6 @@ import toast from "../components/Toast";
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3Modal from 'web3modal'
-import Link from 'next/link'
 import Select from 'react-select'
 import Mainheader from './components/layout/mainheader';
 import Mainfooter from './components/layout/mainfooter';

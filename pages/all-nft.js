@@ -5,7 +5,6 @@ import toast from "../components/Toast";
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Web3Modal from 'web3modal'
-import Link from 'next/link'
 import Select from 'react-select'
 import Mainheader from './components/layout/mainheader';
 import Mainfooter from './components/layout/mainfooter';
@@ -295,8 +294,9 @@ export default function Home() {
 
   async function buyNft(nft) {
 
-    /* needs the user to sign the transaction, so will use Web3Provider and sign it */
     console.log(nft)
+    /* needs the user to sign the transaction, so will use Web3Provider and sign it */
+  
     const user = JSON.parse(localStorage.getItem('user'));
     var temp = 'logout';
     var response = await axios.get(process.env.NEXT_PUBLIC_BASE_URL+'/api/check-auth',{
@@ -375,6 +375,31 @@ export default function Home() {
           },
         }).then((response)  => {
           notify("success", 'Buy NFT successfully!')
+          const data = response.data;
+        }).catch(function (error) {
+          // handle error
+          if(error.response.status == 400){
+            notify("error", error.response.data.error)
+          }else if(error.response.status == 401) {
+            localStorage.removeItem("user")
+            router.push('/login')
+          }else{
+            notify("error", 'Something went wrong please try again!')
+          } 
+        })
+
+        let transaction_detail = new FormData();
+        transaction_detail.append('product_id', nft.id)
+        transaction_detail.append('Transaction_Token', 'ABC001567IUOP')
+        transaction_detail.append('Price', nft.price)
+        transaction_detail.append('Quantity', 1)
+
+        axios.post(process.env.NEXT_PUBLIC_BASE_URL+'/api/order-nft', transaction_detail,{
+          headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer '+user.access_token
+          },
+        }).then((response)  => {
           const data = response.data;
         }).catch(function (error) {
           // handle error
@@ -589,7 +614,12 @@ export default function Home() {
                       
                           <h5 className="rate">
                             $ {nft.DollarPrice.toFixed(7)}
-                            <span className="like-design"><a  onClick={() => wishlist(nft.wishlist_id, nft.id)} id={nft.wishlist_id}  ><i className={nft.wishlist == 1 ? 'fa fa-heart':'fa fa-heart-o'} aria-hidden="true"></i></a></span>
+                            {
+                              nft.status == 'Listed' ?
+                                <span className="like-design"><a  onClick={() => wishlist(nft.wishlist_id, nft.id)} id={nft.wishlist_id}  ><i className={nft.wishlist == 1 ? 'fa fa-heart':'fa fa-heart-o'} aria-hidden="true"></i></a></span>
+                              :
+                              ''
+                            }
                             </h5>
                           <button className="btn btn-info" id={'button_disabled'+nft.id}   onClick={() => buyNft(nft)} data-id={nft.tokenID} disabled={nft.status == 'sold' ? true : false}  >{nft.status == 'sold' ? 'Sold' : 'Buy'}</button>
                         </div>

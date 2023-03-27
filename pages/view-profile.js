@@ -1,10 +1,7 @@
 /* pages/create-nft.js */
 import * as React from "react";
-import { ethers } from 'ethers'
 import axios from 'axios'
 import { useRouter } from 'next/router'
-import Web3Modal from 'web3modal'
-import Link from 'next/link'
 import toast from "../components/Toast";
 import { useEffect, useState } from 'react'
 import Mainheader from './components/layout/mainheader';

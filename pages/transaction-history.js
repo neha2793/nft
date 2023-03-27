@@ -11,7 +11,7 @@ import Mainfooter from './components/layout/mainfooter';
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
-import { setRevalidateHeaders } from "next/dist/server/send-payload";
+
 
 
 
@@ -94,12 +94,12 @@ export default function TransactionHistory() {
       
     },
     {
-      text:  "Order ID",
-      dataField: 'Order_ID',
+      text:  "Transaction ID",
+      dataField: 'Transaction_Token',
       sort: true,
       headerStyle: { minWidth: '120px' },
       style: { width: '120px' },
-      formatter: (cell, row) => row.Order_ID
+      formatter: (cell, row) => row.Transaction_Token
     },
     {
       text: "Name",

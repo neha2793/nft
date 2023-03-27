@@ -1,17 +1,15 @@
 /* pages/create-nft.js */
 import * as React from "react";
 import { useState } from 'react'
-import { ethers } from 'ethers'
 import axios from 'axios'
 import { useRouter } from 'next/router'
-import Web3Modal from 'web3modal'
 import Link from 'next/link'
 import toast from "../components/Toast";
 import Mainheader from './components/layout/mainheader';
 import Mainfooter from './components/layout/mainfooter';
 
 
-export default function signup() {
+export default function Signup() {
   
   const [inputField , setInputField] = useState({
     first_name: '',

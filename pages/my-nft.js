@@ -275,7 +275,7 @@ export default function CreatorDashboard() {
                         <h3><a href="#">{nft.name}</a></h3>
                         <h5 className="rate">
                           $ {nft.DollarPrice.toFixed(7)}
-                          <span className="like-design"><a  onClick={() => wishlist(nft.wishlist_id, nft.id)} id={nft.wishlist_id} ><i className={nft.wishlist == 1 ? 'fa fa-heart':'fa fa-heart-o'} aria-hidden="true"></i></a></span>
+                          {/* <span className="like-design"><a  onClick={() => wishlist(nft.wishlist_id, nft.id)} id={nft.wishlist_id} ><i className={nft.wishlist == 1 ? 'fa fa-heart':'fa fa-heart-o'} aria-hidden="true"></i></a></span> */}
 
                         </h5>
                         {/* <button className="mt-4 w-full bg-pink-500 text-white font-bold py-2 px-12 rounded" onClick={() => listNFT(nft)} value={nft.item_id}><span className="front">Map Shipping Container</span></button> */}
