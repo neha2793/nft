@@ -3669,10 +3669,10 @@
   "resolved" "https://registry.npmjs.org/core-js-pure/-/core-js-pure-3.25.0.tgz"
   "version" "3.25.0"
 
-"core-js@^2.6.9":
-  "integrity" "sha512-HOpZf6eXmnl7la+cUdMnLvUxKNqLUzJvgIziQ0DiF3JwSImNphIqdGqzj6hIKyX04MmV0poclQ7+wjWvxQyR2A=="
-  "resolved" "https://registry.npmjs.org/core-js/-/core-js-2.6.9.tgz"
-  "version" "2.6.9"
+"core-js@^3.23.3":
+  "integrity" "sha512-+jwgnhg6cQxKYIIjGtAHq2nwUOolo9eoFZ4sHfUH09BLXBgxnH4gA0zEd+t+BO2cNB8idaBtZFcFTRjQJRJmAw=="
+  "resolved" "https://registry.npmjs.org/core-js/-/core-js-3.29.1.tgz"
+  "version" "3.29.1"
 
 "core-util-is@~1.0.0", "core-util-is@1.0.2":
   "integrity" "sha512-3lqz5YjWTYnW6dlDa5TLaTCcShfar1e40rmcJVwCBJC6mWlFuj0eCHIElmG1g5kyuJ/GD+8Wn4FFCcz4gJPfaQ=="
@@ -4776,7 +4776,7 @@
     "@scure/bip32" "1.1.0"
     "@scure/bip39" "1.1.0"
 
-"ethereum-waffle@^4.0.10npm ":
+"ethereum-waffle@^4.0.10":
   "integrity" "sha512-iw9z1otq7qNkGDNcMoeNeLIATF9yKl1M8AIeu42ElfNBplq0e+5PeasQmm8ybY/elkZ1XyRO0JBQxQdVRb8bqQ=="
   "resolved" "https://registry.npmjs.org/ethereum-waffle/-/ethereum-waffle-4.0.10.tgz"
   "version" "4.0.10"
