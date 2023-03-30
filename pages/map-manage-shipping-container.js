@@ -1,0 +1,1 @@
+console.log('test map manage shipping container');
