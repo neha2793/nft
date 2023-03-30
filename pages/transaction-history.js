@@ -1,1 +1,10 @@
-console.log('test  transaction history');
+import * as React from "react";
+
+export default function Transaction() {
+  return (
+    <div>
+      <h1>transaction</h1>
+    </div>
+   
+  )
+}
