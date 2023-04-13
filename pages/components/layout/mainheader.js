@@ -92,7 +92,7 @@ class Mainheader extends React.Component {
     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span className="navbar-toggler-icon"></span>
     </button>
-    <div className="collapse navbar-collapse" id="collapsibleNavbar">
+    <div className="collapse navbar-collapse" id="collapsibleNavbar" style={{visibility: 'visible'}}>
       <ul className="navbar-nav ml-auto" id="myNavbar">
         
         {/* <li className="nav-item">
@@ -119,9 +119,11 @@ class Mainheader extends React.Component {
           </Link>
         </li>  */}
         <li className="nav-item" style={{ display: this.state.user ? "block" : "none" }}>
-          <a href="/shipping-container" className="nav-link"  >
-            Shipping Container
-          </a>
+          <Link href="/shipping-container" >
+            <a className="nav-link"  >
+              Shipping Container
+            </a>
+          </Link>
         </li>
         <li className="nav-item" style={{ display: this.state.user ? "block" : "none" }}>
           <Link href="/all-nft" >

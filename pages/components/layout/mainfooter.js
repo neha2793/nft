@@ -55,16 +55,19 @@ class Mainfooter extends React.Component {
             {/* <a href="#">All NFTs</a> */}
           </li>
           <li style={{ display: this.state.user ? "block" : "none" }}>
-            <a href="/slime-seat-management"  >
-              Slime Seat
-            </a>
+            <Link href="/slime-seat-management">
+                <a>
+                Slime Seat
+                </a>
+            </Link>
           </li>
 
           <li style={{ display: this.state.user ? "block" : "none" }}>
-         
-            <a href="/shipping-container-video"  >
-              SC Video
-            </a>
+            <Link href="/shipping-container-video">
+              <a>
+                SC Video
+              </a>
+            </Link>
           </li> 
           <li style={{ display: this.state.user ? "block" : "none" }}>
             <Link href="/transaction-history" >
@@ -86,7 +89,13 @@ class Mainfooter extends React.Component {
           </li>
           <li><a href="https://2kpaid.com/app/public/about">About</a></li>
           <li><a href="https://2kpaid.com/app/public/contact">Contact</a></li>
-          <li><a href="faq">FAQ</a></li>
+
+          <li>
+            <Link href="/faq">
+
+              <a>FAQ</a>
+            </Link>
+          </li>
         </ul>
       </div>
      </div>
