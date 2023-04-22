@@ -87,8 +87,8 @@ class Mainfooter extends React.Component {
               <a>My NFTs</a>
             </Link> */}
           </li>
-          <li><a href="https://2kpaid.com/app/public/about">About</a></li>
-          <li><a href="https://2kpaid.com/app/public/contact">Contact</a></li>
+          <li><a href="http://2kpaid.com/about">About</a></li>
+          <li><a href="http://2kpaid.com/contact">Contact</a></li>
 
           <li>
             <Link href="/faq">
@@ -141,9 +141,9 @@ class Mainfooter extends React.Component {
           </div>
           <div className="col-md-7">
             <ul>
-              <li><a href="https://2kpaid.com/app/public/privacy_policy">Privacy Policy</a></li>
+              <li><a href="http://2kpaid.com/privacy_policy">Privacy Policy</a></li>
               <li><a href="#">Cookies</a></li>
-              <li><a href="https://2kpaid.com/app/public/term_of_use">Terms of Use</a></li>
+              <li><a href="http://2kpaid.com/term_of_use">Terms of Use</a></li>
             </ul>
           </div>
         </div>
