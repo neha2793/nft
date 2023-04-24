@@ -64,6 +64,7 @@ export default function Myprofile() {
         }
       })
     }else{
+      console.log('ok');
       router.push('/login')
     }
   }
