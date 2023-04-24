@@ -64,7 +64,6 @@ export default function Myprofile() {
         }
       })
     }else{
-      console.log('ok');
       router.push('/login')
     }
   }
@@ -100,13 +99,13 @@ export default function Myprofile() {
     let fd = new FormData();
     fd.append('name', inputField.name)
     fd.append('lastname', inputField.lastname)
-    fd.append('bio',  Boolean(inputField.bio) ? inputField.bio : '')
+    fd.append('bio', inputField.bio)
 
-    fd.append('city',  Boolean(inputField.city) ? inputField.city : '')
-    fd.append('state',  Boolean(inputField.state) ? inputField.state : '')
-    fd.append('country',  Boolean(inputField.country) ? inputField.country : '')
-    fd.append('pincode',  Boolean(inputField.pincode) ? inputField.pincode : '')
-    fd.append('address',  Boolean(inputField.address) ? inputField.address : '')
+    fd.append('city', inputField.city)
+    fd.append('state', inputField.state)
+    fd.append('country', inputField.country)
+    fd.append('pincode', inputField.pincode)
+    fd.append('address', inputField.address)
     fd.append('facebook_link', Boolean(inputField.facebook_link) ? inputField.facebook_link : '')
     fd.append('twitter_link', Boolean(inputField.twitter_link )? inputField.twitter_link : '')
     fd.append('youtube_link', Boolean(inputField.youtube_link) ? inputField.youtube_link : '')
