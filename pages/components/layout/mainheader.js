@@ -147,18 +147,40 @@ class Mainheader extends React.Component {
             <ul>
               <li onClick={this.profileTab} ><a className="dropdown-item" href="#"><i className="fa fa-user" aria-hidden="true"></i>Profile info<i className="fa fa-angle-down" aria-hidden="true"></i></a>
                 <ul id="profile-tb" className='' style={{display:'none'}}>
-                  <li><a className="dropdown-item" href="/view-profile">Profile View</a></li>
+                  <li>
+                    <Link href="/view-profile">
+                      <a className="dropdown-item">Profile View</a>
+                    </Link>
+                  </li>
                   <li><Link href="/my-profile"><a className="dropdown-item" href="#">Profile Edit</a></Link></li>
                 </ul>
               </li>
               <li onClick={(e) => {this.nftTab(e)}} ><a className="dropdown-item"  href="#"><img src="assets/images/nft.png"></img>My NFTs<i className="fa fa-angle-down" aria-hidden="true"></i></a>
                 <ul  id="nft-tb" style={{display:'none'}}>
-                  <li><a className="dropdown-item" href='/create-nft' onClick={this.CheckApproval}>Create NFT</a></li>
-                  <li><a className="dropdown-item" href="/my-nft" >Minted</a></li>
-                  <li><a className="dropdown-item" href="/purchased-nfts">Purchased</a></li>
+                  <li>
+                  <Link href="/create-nft">
+                    <a className="dropdown-item" onClick={this.CheckApproval}>Create NFT</a>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link href="/my-nft">
+                    <a className="dropdown-item"  >Minted</a>
+                  </Link>
+                  </li>
+                  <li>
+                  <Link href="/purchased-nfts">
+                    <a className="dropdown-item" >Purchased</a>
+                    </Link>
+                  </li>
                 </ul>
               </li>
-              <li><a className="dropdown-item" href="/wishlist"><i className="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
+              <li>
+              <Link href="wishlist">
+                <a className="dropdown-item" >
+                  <i className="fa fa-heart" aria-hidden="true"></i>Wishlist
+                </a>
+                </Link>
+              </li>
             </ul>
             <a className="dropdown-item" href="#" onClick={this.Logout}>Log out</a>
           </div>
