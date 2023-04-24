@@ -40,6 +40,7 @@ export default function Home() {
   }, []);
 
   async function loadNFTs() {
+    console.log(process.env.NEXT_PUBLIC_BASE_URL+'/api/nft-profile-image-list');
     User(JSON.parse(localStorage.getItem('user')))
 
     // Fatch Top Seller
