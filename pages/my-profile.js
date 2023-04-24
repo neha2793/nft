@@ -99,13 +99,13 @@ export default function Myprofile() {
     let fd = new FormData();
     fd.append('name', inputField.name)
     fd.append('lastname', inputField.lastname)
-    fd.append('bio', Boolean(inputField.bio) ? inputField.bio : '')
+    fd.append('bio', inputField.bio)
 
-    fd.append('city', Boolean(inputField.city) ? inputField.city : '' )
-    fd.append('state', Boolean(inputField.state) ? inputField.state : '' )
-    fd.append('country', Boolean(inputField.country) ? inputField.country : '' )
-    fd.append('pincode', Boolean(inputField.pincode) ? inputField.pincode : '' )
-    fd.append('address', Boolean(inputField.address) ? inputField.address : '' )
+    fd.append('city', inputField.city )
+    fd.append('state', inputField.status )
+    fd.append('country', inputField.country )
+    fd.append('pincode', inputField.pincode )
+    fd.append('address', inputField.address )
     fd.append('facebook_link', Boolean(inputField.facebook_link) ? inputField.facebook_link : '')
     fd.append('twitter_link', Boolean(inputField.twitter_link )? inputField.twitter_link : '')
     fd.append('youtube_link', Boolean(inputField.youtube_link) ? inputField.youtube_link : '')
@@ -202,16 +202,16 @@ export default function Myprofile() {
                     <div className="row">
                       <div className="col-md-6">
                         <div className="form-group">
-                            <input type="text" className="form-control" onChange={inputsHandler}  name="name"  placeholder="First Name" value={inputField.name ? inputField.name : ''} id="fname" disabled={inputField.is_verified == 0 ? false : true} />
+                            <input type="text" className="form-control" onChange={inputsHandler}  name="name"  placeholder="First Name" value={inputField.name} id="fname" disabled={inputField.is_verified == 0 ? false : true} />
                         </div>
                         <div className="form-group">
-                          <input type="email" className="form-control"  placeholder="Email Address" value={inputField.email} id="email" disabled />
+                          <input type="email" className="form-control" onChange={inputsHandler}  name="email" placeholder="Email Address" value={inputField.email} id="email" disabled />
                         </div>
                         <div className="form-group">
-                          <input type="text" className="form-control" onChange={inputsHandler}  name="city" placeholder="City" value={inputField.city ? inputField.city : '' } disabled={inputField.is_verified == 0 ? false : true} />
+                          <input type="text" className="form-control" onChange={inputsHandler}  name="city" placeholder="City" value={inputField.city } disabled={inputField.is_verified == 0 ? false : true} />
                         </div>
                         <div className="form-group">
-                          <input type="text" className="form-control" onChange={inputsHandler}  name="country" placeholder="Country" value={inputField.country ? inputField.country  :''} disabled={inputField.is_verified == 0 ? false : true} />
+                          <input type="text" className="form-control" onChange={inputsHandler}  name="country" placeholder="Country" value={inputField.country } disabled={inputField.is_verified == 0 ? false : true} />
                         </div>
                         <div className="form-group">
                           <input type="text" className="form-control" onChange={inputsHandler}  name="facebook_link" placeholder="Facebook link" value={inputField.facebook_link ? inputField.facebook_link : '' } disabled={inputField.is_verified == 0 ? false : true} />
@@ -223,27 +223,27 @@ export default function Myprofile() {
                       
                       <div className="col-md-6">
                         <div className="form-group">
-                          <input type="text" className="form-control" onChange={inputsHandler}  name="lastname" placeholder="Last Name" value={inputField.lastname ? inputField.lastname : ''} id="lname" disabled={inputField.is_verified == 0 ? false : true} />
+                          <input type="text" className="form-control" onChange={inputsHandler}  name="lastname" placeholder="Last Name" value={inputField.lastname} id="lname" disabled={inputField.is_verified == 0 ? false : true} />
                         </div>
                         <div className="form-group">
                           <input type="text" className="form-control" onChange={inputsHandler}  name="phone_number" placeholder="Phone Number (optional)" value={Boolean(inputField.phone_number) ? inputField.phone_number : '' } disabled={inputField.is_verified == 0 ? false : true} />
                         </div>
                         <div className="form-group">
-                          <input type="text" className="form-control" onChange={inputsHandler}  name="state" placeholder="State" value={inputField.state ? inputField.state : '' } disabled={inputField.is_verified == 0 ? false : true} />
+                          <input type="text" className="form-control" onChange={inputsHandler}  name="state" placeholder="State" value={inputField.state } disabled={inputField.is_verified == 0 ? false : true} />
                         </div>
                         <div className="form-group">
-                          <input type="text" className="form-control" onChange={inputsHandler}  name="pincode" placeholder="Pincode" value={inputField.pincode ? inputField.pincode : '' } disabled={inputField.is_verified == 0 ? false : true} />
+                          <input type="text" className="form-control" onChange={inputsHandler}  name="pincode" placeholder="Pincode" value={inputField.pincode } disabled={inputField.is_verified == 0 ? false : true} />
                         </div>
                         <div className="form-group">
                           <input type="text" className="form-control" onChange={inputsHandler}  name="twitter_link" placeholder="Twitter link" value={inputField.twitter_link ? inputField.twitter_link : '' } disabled={inputField.is_verified == 0 ? false : true} />
                         </div>
                         <div className="form-group">
-                          <input type="text" className="form-control" onChange={inputsHandler}  name="bio" placeholder="Bio" value={inputField.bio ? inputField.bio : '' } disabled={inputField.is_verified == 2 ? true : false} />
+                          <input type="text" className="form-control" onChange={inputsHandler}  name="bio" placeholder="Bio" value={inputField.bio } disabled={inputField.is_verified == 2 ? true : false} />
                         </div>
                       </div>
                     </div>
                     <div className="form-group">
-                      <input type="text" className="form-control" onChange={inputsHandler}  name="address" placeholder="Address" value={inputField.address ? inputField.address : '' } disabled={inputField.is_verified == 0 ? false : true} />
+                      <input type="text" className="form-control" onChange={inputsHandler}  name="address" placeholder="Address" value={inputField.address } disabled={inputField.is_verified == 0 ? false : true} />
                     </div>
                     {/* <div className="form-group forgotpassword">
                         <a href="forgot-password.html">Forgot password?</a>
