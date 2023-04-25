@@ -1,9 +1,15 @@
 /* pages/create-nft.js */
 import * as React from "react";
-import axios from 'axios'
-import { useRouter } from 'next/router'
+import { useState } from 'react'
+import { ethers } from 'ethers'
+import axios from "axios";
 import toast from "../components/Toast";
-import { useEffect, useState, useRef } from 'react'
+import { useRouter } from 'next/router'
+import Web3Modal from 'web3modal'
+import {
+  marketplaceAddress
+} from '../config'
+import NFTMarketplace from '../artifacts/contracts/NFTMarketplace.sol/NFTMarketplace.json'
 import Mainheader from './components/layout/mainheader';
 import Mainfooter from './components/layout/mainfooter';
 
