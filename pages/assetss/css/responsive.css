@@ -99,6 +99,17 @@ ul.socialslinks {
 .profileinfo-ex span {
     text-align: center;
 }
+profileinfo {
+    width: 100%;
+}
+
+.profileinfo-ex {
+    position: static;
+}
+
+.profileinfo ul {
+    margin: 11px 0 0;
+}
 .collection_item:nth-child(2), .collection_item:nth-child(4) {
     width: 100%;
 }
