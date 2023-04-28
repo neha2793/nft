@@ -255,7 +255,7 @@ h2.heading {
     padding: 0px 10px;
 }
 .nftbox {
-    width: 216px !important;
+   
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -868,6 +868,7 @@ h2.heading {
     line-height: 19px;
     text-align: center;
     color: #6ad323;
+    margin-left: 10px;
     text-transform: uppercase;
 }
 .login-page-design .form-group.signuplink p {

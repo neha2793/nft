@@ -80,6 +80,25 @@ button.navbar-toggler span.navbar-toggler-icon::after {
 .nftbox-img img.img-fluid {
     width: 100%;
 }
+.nftbox {
+    margin-bottom: 0px;
+}
+.profile-left {
+    padding: 30px 15px;
+    height: auto;
+    margin-bottom: 4px;
+}
+.profile-imggroup {
+    display: block;
+}
+ul.socialslinks {
+    position: static;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profileinfo-ex span {
+    text-align: center;
+}
 .collection_item:nth-child(2), .collection_item:nth-child(4) {
     width: 100%;
 }
