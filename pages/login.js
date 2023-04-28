@@ -100,7 +100,7 @@ export default function Login() {
                     <a href="#"><img src="" className="img-fluid" alt=""/>continue with google</a>
                   </div>
                   <div className="form-group signuplink">
-                    <p>Not registered? <Link href="/signup">
+                    <p>Not registered? &nbsp<Link href="/signup">
                         <a >
                         sign up
                         </a>
