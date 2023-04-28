@@ -34,7 +34,7 @@ export default function FAQ() {
 
 
 
-                <section className="content-sec" style= {{ background: "url(" + "assets/images/loginbg.jpg" + ")" }}>
+                <section className="content-sec faqsec" style= {{ background: "url(" + "assets/images/loginbg.jpg" + ")" }}>
                     <div className="container">
                         <div className="row">
                         <div className="col-md-12">
