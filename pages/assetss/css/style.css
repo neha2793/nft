@@ -2077,3 +2077,19 @@ img.verification-images {
     border-radius: 100px;
     background: #f0f0f0;
 }
+.content-page h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0px 10px 0px;
+    color: #fff;
+}
+.content-page p {
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+section.content-sec {
+    padding: 50px 0px 60px;
+    color: #fff;
+}
