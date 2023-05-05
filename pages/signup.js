@@ -114,7 +114,7 @@ export default function Signup() {
                     <a href="#" onClick={() => notify("success", "Success!")}><img src="" className="img-fluid" alt=""/>continue with google</a>
                   </div>
                   <div className="form-group signuplink">
-                    <p>Already have an account? &nbsp <Link href="/login">
+                    <p>Already have an account? &nbsp;<Link href="/login">
                         <a  >
                         Login
                         </a>
