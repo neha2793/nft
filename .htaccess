@@ -1,9 +1,11 @@
 <IfModule mod_rewrite.c>
 
   RewriteEngine On
-
-  RewriteCond %{REQUEST_FILENAME}  -f [OR]
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^(.*)$ index.html [L,QSA]
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule ^.*$ public/index.html [L,QSA]
 
 </IfModule>
