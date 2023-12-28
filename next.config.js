@@ -6,6 +6,6 @@ const nextConfig = {
 }
 module.exports = {
   distDir: 'build',
-  basePath: '/'
+  
 }
 
