@@ -60,8 +60,8 @@ export default function TransactionHistory() {
         }) 
         const data = await response.data; 
 
-        const perUSDPrice = await axios.get('https://api.coinconvert.net/convert/matic/usd?amount='+1) 
-        var dataWithUSD = await setData(data.data, perUSDPrice.data.USD)
+        const perUSDPrice = await axios.get('https://api.coingecko.com/api/v3/simple/price?ids=matic-network&vs_currencies=usd') 
+        var dataWithUSD = await setData(data.data, perUSDPrice.data['matic-network'].usd)
         console.log(dataWithUSD)
         setFilteredTransactionHostory(dataWithUSD);
         setIsLoading(false)
